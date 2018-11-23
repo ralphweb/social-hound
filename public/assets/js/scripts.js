@@ -16,6 +16,10 @@ $(function() {
     $("#loader").show();
     moment.locale('es');
     init(true);
+
+    window.odometerOptions = {
+      format: '(.ddd),dd'
+    };
 });
 
 function init(interval) 
@@ -125,7 +129,7 @@ function getCount(callback = null) {
         let titledash = maintopic
         if(maintopic=="copihue2018") titledash = "CopihueDeOro2018";
         $("div.topic text").text("#"+titledash);
-        $("div.topic .odometer").text(numberWithCommas(data.total));
+        $("div.topic .odometer").text(data.total);
         if(callback) callback(data);
     })
 }
