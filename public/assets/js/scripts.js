@@ -18,7 +18,7 @@ $(function() {
     init(true);
 
     window.odometerOptions = {
-      format: '(.ddd),dd'
+      format: '(,ddd).dd'
     };
 });
 
