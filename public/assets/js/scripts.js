@@ -125,7 +125,7 @@ function getCount(callback = null) {
         let titledash = maintopic
         if(maintopic=="copihue2018") titledash = "CopihueDeOro2018";
         $("div.topic text").text("#"+titledash);
-        $("div.topic .odometer").text(formatNumber.new(data.total));
+        $("div.topic .odometer").text(numberWithCommas(data.total));
         if(callback) callback(data);
     })
 }
@@ -494,6 +494,10 @@ function calculateSize(size,realminsize,realmaxsize,minsize,maxsize) {
     let newsize = Math.abs(Math.ceil(pendiente*(maxsize-size)-realmaxsize));
     console.log(newsize);
     return newsize;
+}
+
+const numberWithCommas = (x) => {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
 var formatNumber = {
