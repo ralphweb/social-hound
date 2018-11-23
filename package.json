@@ -6,7 +6,11 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+<<<<<<< HEAD
     "body-parser": "^1.18.3",
+=======
+    "body-parser": "~1.17.1",
+>>>>>>> aa835c1af8b8e03ab2a9a4a557708c3a004a9f37
     "chart.js": "^2.7.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
