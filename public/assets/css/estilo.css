@@ -1,0 +1,631 @@
+
+
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'roboto',sans-serif;
+    overflow-x: hidden;
+    color: #cfd2da;
+    background-attachment: fixed;
+    background-image: url('../wetransfer-153621/Background02_limpio_confranjas_low.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: repeat;
+}
+
+.h1, h1
+{
+    font-weight: 900;
+}
+
+.h1 .small,.h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small
+{
+    color: #cfd2da;
+    font-weight: 300;
+    font-size: 55%;
+}
+
+.sidebar
+{
+    color: #cfd2da;
+    border-right: none;
+    background: transparent;
+}
+
+.sidebar .logo_analitic
+{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.sidebar .logo_analitic img
+{
+    width: 100%;
+    padding: 3em;
+}
+
+.sidebar p
+{
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 5px;
+    font-size: 85%;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: #51586a;
+    text-transform: uppercase;
+}
+
+.sidebar a
+{
+    color: #cfd2da;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.sidebar a:hover, .sidebar a:focus
+{
+    background: #0083b0 !important;
+}
+
+.nav-sidebar > .active > a, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus
+{
+    color: #fff;
+    background-color: #eab76f;
+    font-weight: 400;
+    height: 100%;
+}
+
+.nav-sidebar > .active > a:hover
+{
+    background: #0083b0 !important;
+}
+
+.main
+{
+    margin-top: 5em;
+}
+
+.box-col
+{
+    padding: 1em;
+}
+
+.generalNube
+{
+}
+
+.generalNube h2
+{
+    font-weight: 600 !important;
+}
+
+.dentro_box
+{
+    padding: 2em;
+    background: rgba(0,0,0,0.5);
+    border-radius: 7px;
+    border: 1px solid #434857;
+}
+
+.paging .dentro_box
+{
+    display: none;
+}
+
+.paging .dentro_box.active
+{
+    display: block;
+}
+.page-control
+{
+    display: none;
+    color: #fff;
+}
+.paging .page-control
+{
+    display: inline-block;
+}
+.paging a.page-left {
+    float: left;
+}
+.paging a.page-right {
+    float: right;
+}
+
+.dentro_box h3
+{
+    margin: 0;
+    font-size: 1em;
+    font-weight: 400;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+}
+
+.nube-content h2
+{
+    font-size: 3em;
+    font-weight: 100;
+    margin: 0;
+    padding: 10px;
+    display: inline-block;
+    color: #eae1ad;
+}
+
+.nube-content h2:after
+{
+    content: ' | ';
+    color: #434857;
+}
+
+.graph.nube
+{
+    height: auto;
+    background: #1d1f25;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 1em 0;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.graph.nube text
+{
+    font-weight: 900;
+}
+
+#refresh, #refresh:focus
+{
+    background: #eee;
+    border: none !important;
+    color: #252830;
+    padding: .4em .6em;
+    outline: none;
+    box-shadow: none;
+}
+
+#refresh:hover
+{
+    color: #fff;
+    background-color: rgba(248,2,82,1);
+}
+
+#loader
+{
+    text-align: -webkit-center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    background-image: url('../wetransfer-153621/Background02_limpio_confranjas_low.png');
+    background-size: cover;
+    background-position: 50% 0%;
+}
+
+.spinner-holder
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.mdl-spinner
+{
+    width: 120px;
+    height: 120px;
+    margin: 25em;
+}
+
+.mdl-spinner--single-color .mdl-spinner__layer-1,
+.mdl-spinner--single-color .mdl-spinner__layer-2,
+.mdl-spinner--single-color .mdl-spinner__layer-3,
+.mdl-spinner--single-color .mdl-spinner__layer-4
+{
+    border-color: #d4ae65;
+}
+
+.material-icons
+{
+    width: 24px;
+    font-size: 1em;
+}
+
+.page-header
+{
+    padding-bottom: 9px;
+    margin: 0;
+    padding: 20px 30px 15px 0;
+    border-bottom: none;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    padding-left: 18.66666667%;
+    font-size: 2em;
+    background: rgba(0,0,0,0.3);
+}
+
+/** caja tw **/
+
+.tw_box
+{
+    padding: 1.5em;
+    background: #1d1f25;
+    border-radius: 7px;
+    border: 1px solid #434857;
+}
+
+.tw_box .perfil
+{
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.tw_box .perfil .foto_perfil
+{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    float: left;
+}
+
+.tw_box .perfil .foto_perfil img
+{
+    width: 100%;
+}
+
+.tw_box .perfil .nombre
+{
+    width: auto;
+    height: 40px;
+    float: left;
+}
+
+.tw_box .perfil .nombre h1
+{
+    font-weight: 800;
+    font-size: 1.2em;
+    text-align: left;
+    margin: 0;
+    font-family: 'roboto', sans-serif;
+    padding: 0 10px;
+}
+
+.tw_box .perfil .nombre p {
+    font-weight: 300;
+    font-size: 1em;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    color: #a8b8c3;
+    font-family: 'roboto', sans-serif;
+    padding: 0 10px;
+}
+
+.tw_box .perfil .redes_imagen
+{
+    width: 30px;
+    height: 40px;
+    float: right;
+    text-align: center;
+    line-height: 1.4;
+    font-size: 2em;
+    color: #cfd2da;
+}
+
+.tw_box .texto
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.tw_box .texto p
+{
+    font-size: 1.1em;
+    font-weight: 300;
+    margin: 5px 0;
+    padding: 0;
+    line-height: normal;
+}
+
+.tw_box .texto a
+{
+    color: #eae1ad;
+}
+
+.tw_box .texto .fecha_texto
+{
+    margin-top: 1em;
+}
+
+.tw_box .texto .fecha_texto p
+{
+    margin: 0;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+/** **/
+
+/** paginacion **/
+
+.pagination>li:first-child>a, .pagination>li:first-child>span
+{
+    margin-left: 0;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    color: #fff;
+    font-size: 1em;
+    line-height: normal;
+    padding: 0.7em 0 .3em 1em;
+    background: #434857;
+    border: none;
+}
+
+.pagination>li:last-child>a, .pagination>li:last-child>span
+{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: #fff;
+    font-size: 1em;
+    line-height: normal;
+    padding: 0.7em 0 .3em 1em;
+    background: #434857;
+    border: none;
+}
+
+.pagination>li>a, .pagination>li>span
+{
+    position: relative;
+    float: left;
+    padding: .55em 1em;
+    line-height: normal;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #1d1f25;
+    border: none;
+    font-size: 1em;
+}
+
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover
+{
+    z-index: 2;
+    color: #ffffff;
+    background: #1d1f25;
+    border: none;
+}
+
+/** paginacion **/
+
+@media screen and (max-width: 1600px)
+{
+    body
+    {
+        font-size: 16px;
+    }
+    .sidebar .logo_analitic img
+    {
+        padding: 2em;
+    }
+}
+
+@media screen and (max-width: 1366px)
+{
+    body
+    {
+        font-size: 14px;
+    }
+    .sidebar .logo_analitic img
+    {
+        padding: 1em;
+    }
+}
+
+@media screen and (max-width: 767px)
+{
+    .nav-sidebar
+    {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 9;
+        background: #1d1f25;
+        margin: 0;
+    }
+    .sidebar .logo_analitic,
+    .sidebar p
+    {
+        display: none;
+    }
+    .page-header
+    {
+        padding: 20px;
+    }
+    .mdl-spinner
+    {
+        margin: 15em;
+    }
+    .nube-content h2
+    {
+        font-size: 2em;
+    }
+    .sidebar li
+    {
+        display: inline-block;
+        width: 24.5%;
+        height: 100%;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small
+    {
+        display: inline-block;
+    }
+    .mdl-spinner
+    {
+        width: 90px;
+        height: 90px;
+        margin: 5em;
+    }
+}
+
+@media screen and (max-width: 480px)
+{
+    body
+    {
+        font-size: 13px;
+    }
+    .sidebar li
+    {
+        width: 24%;
+    }
+}
+
+.powered-img
+{
+    height: 3vh;
+    float: right;
+}
+
+.powered-small
+{
+    float: right;
+    z-index: 12;
+    position: absolute;
+    top: 23px;
+    right: 85px;
+}
+
+.profile-pic
+{
+    max-height: 25vh;
+}
+
+.guest-klout
+{
+    background-image: url('../img/flag.svg');
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24pt;
+    left: -5px;
+}
+
+.sprofile
+{
+    border-radius: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    border-top: 1px solid rgba(255,255,255,0.5);
+}
+
+.klout-influence-list img
+{
+    width: auto;
+    height: 70px;
+}
+
+.influence-klout
+{
+    background-image: url('../img/flag.svg');
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15pt;
+    line-height: 29px;
+    margin-top: -30px;
+}
+
+.klout-name
+{
+    line-height: 70px;
+}
+
+.klout-influence-list .list-group-item
+{
+    background: none;
+    border: none;
+    color: white;
+}
+
+.extra-data
+{
+    display: none;
+}
+
+.toggle-extra-data
+{
+    cursor: pointer;
+}
+
+.highlighted-post
+{
+    color: white;
+}
+
+.post-image
+{
+    float: left;
+    height: 120px;
+    margin-right: 10px;
+}
+
+.post-text
+{
+    font-size: 12px;
+}
+
+.post-interaction
+{
+    margin-right: 10px;
+}
+
+#loader .loader-logo
+{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#emojiscloud
+{
+   /* background-color: rgba(255,255,255,0.8); */
+}
+.cloud
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 28pt;
+}
+
+text.tag {
+    margin: 1vh 2vw;
+}
