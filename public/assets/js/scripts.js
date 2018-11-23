@@ -122,8 +122,9 @@ function getCount(callback = null) {
     $.get(apiurl+"/count/"+maintopic,function(data) {
         console.log(data);
         data = data.data[0];
-        if(maintopic=="copihue2018") maintopic = "CopihueDeOro2018";
-        $("div.topic text").text("#"+maintopic);
+        let titledash = maintopic
+        if(maintopic=="copihue2018") titledash = "CopihueDeOro2018";
+        $("div.topic text").text("#"+titledash);
         $("div.topic .odometer").text(formatNumber.new(data.total));
         if(callback) callback(data);
     })
