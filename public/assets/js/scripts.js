@@ -436,61 +436,69 @@ function getTagCloud(count,callback = null) {
 }
 
 function getCountByPlatform(count,callback = null) {
+    var dfd = $.Deferred().resolve();
     let labels = [];
     let platformData = [];
     for(key in count.detail) {
         let platform = key;
         labels.push(platform);
-        platformData.push(count.detail[platform]);
-    }
-    console.log(labels);
-    console.log(platformData);
-
-    if(window.plataformasMenciones==null) {
-        var plataformasMencionesData = {
-            labels: labels,
-            datasets: [{
-                type: 'bar',
-                label: 'Menciones',
-                    backgroundColor: [
-                        '#eab76f',
-                        '#f1ebc4',
-                        '#df6965',
-                        '#96bdb2',
-                        '#594b51',
-                        '#ecf0f1'
-                    ],
-                data: platformData,
-                
-                borderWidth: 2
-            }]
-
-        };
-        
-        var ctxplataformasmenciones = document.getElementById("plataformas-menciones").getContext("2d");
-        window.plataformasMenciones = new Chart(ctxplataformasmenciones, {
-            type: 'bar',
-            data: plataformasMencionesData,
-            options: {
-                responsive: true,
-                title: {
-                    display: true,
-                    text: ''
-                },
-                tooltips: {
-                    mode: 'index',
-                    intersect: true
-                }
-            }
+        dfd = dfd.then(function(){
+            return $.get(apiurl+"/count/"+maintopic+"/"+platform,function(data) {
+                data = data.data[0];
+                platformData.push(data.total);
+            });
         });
-    } else {
-        //update chart
-        for(var i=0;i<platformData.length;i++) {
-            window[plataformasMenciones].data.datasets[0].data[i] = platformData[i];
-        }
-        window[plataformasMenciones].update();
     }
-    startEvents();
+    dfd.then(function() {
+        console.log(labels);
+        console.log(platformData);
+
+        if(window.plataformasMenciones==null) {
+            var plataformasMencionesData = {
+                labels: labels,
+                datasets: [{
+                    type: 'bar',
+                    label: 'Menciones',
+                        backgroundColor: [
+                            '#eab76f',
+                            '#f1ebc4',
+                            '#df6965',
+                            '#96bdb2',
+                            '#594b51',
+                            '#ecf0f1'
+                        ],
+                    data: platformData,
+                    
+                    borderWidth: 2
+                }]
+
+            };
+            
+            var ctxplataformasmenciones = document.getElementById("plataformas-menciones").getContext("2d");
+            window.plataformasMenciones = new Chart(ctxplataformasmenciones, {
+                type: 'bar',
+                data: plataformasMencionesData,
+                options: {
+                    responsive: true,
+                    title: {
+                        display: true,
+                        text: ''
+                    },
+                    tooltips: {
+                        mode: 'index',
+                        intersect: true
+                    }
+                }
+            });
+        } else {
+            //update chart
+            for(var i=0;i<platformData.length;i++) {
+                window[plataformasMenciones].data.datasets[0].data[i] = platformData[i];
+            }
+            window[plataformasMenciones].update();
+        }
+        startEvents();
+    });
 }
 
 function calculateSize(size,realminsize,realmaxsize,minsize,maxsize) {
