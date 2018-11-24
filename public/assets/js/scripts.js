@@ -123,7 +123,7 @@ function startInterval(interval,intervalfunc,time) {
 }
 
 function getCount(callback = null) {
-    $.get(apiurl+"/count/"+maintopic,function(data) {
+    $.get(apiurl+"/"+maintopic+"/count/",function(data) {
         console.log(data);
         data = data.data[0];
         let titledash = maintopic
