@@ -453,7 +453,7 @@ function getCountByPlatform(count,callback = null) {
         console.log(labels);
         console.log(platformData);
 
-        if(window.plataformasMenciones==null) {
+        if(window["plataformasMenciones"]==null) {
             var plataformasMencionesData = {
                 labels: labels,
                 datasets: [{
@@ -475,7 +475,7 @@ function getCountByPlatform(count,callback = null) {
             };
             
             var ctxplataformasmenciones = document.getElementById("plataformas-menciones").getContext("2d");
-            window.plataformasMenciones = new Chart(ctxplataformasmenciones, {
+            window["plataformasMenciones"] = new Chart(ctxplataformasmenciones, {
                 type: 'bar',
                 data: plataformasMencionesData,
                 options: {
@@ -493,9 +493,9 @@ function getCountByPlatform(count,callback = null) {
         } else {
             //update chart
             for(var i=0;i<platformData.length;i++) {
-                window[plataformasMenciones].data.datasets[0].data[i] = platformData[i];
+                window["plataformasMenciones"].data.datasets[0].data[i] = platformData[i];
             }
-            window[plataformasMenciones].update();
+            window["plataformasMenciones"].update();
         }
         startEvents();
     });
