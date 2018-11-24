@@ -443,7 +443,7 @@ function getCountByPlatform(count,callback = null) {
         let platform = key;
         labels.push(platform);
         dfd = dfd.then(function(){
-            return $.get(apiurl+"/count/"+maintopic+"/"+platform,function(data) {
+            return $.get(apiurl+"/"+maintopic+"/count/"+platform,function(data) {
                 data = data.data[0];
                 platformData.push(data.total);
             });
