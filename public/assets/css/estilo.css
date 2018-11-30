@@ -14,7 +14,7 @@ body
     overflow-x: hidden;
     color: #cfd2da;
     background-attachment: fixed;
-    background-image: url('../wetransfer-153621/Background02_limpio_confranjas_low.png');
+    background-image: url('../teleton/fondoteleton2018.jpg');
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: repeat;
@@ -208,7 +208,7 @@ body
     height: 100%;
     position: fixed;
     z-index: 9999;
-    background-image: url('../wetransfer-153621/Background02_limpio_confranjas_low.png');
+    background-image: url('../teleton/fondoteleton2018.jpg');
     background-size: cover;
     background-position: 50% 0%;
 }
